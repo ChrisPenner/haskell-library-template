@@ -1,0 +1,64 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 344a6550927d90a00e60f0255869f6db6bbc8ae82e283a88f87b6a1c41085b78
+
+name:           haskell-library-template
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/haskell-library-template#readme>
+homepage:       https://github.com/githubuser/haskell-library-template#readme
+bug-reports:    https://github.com/githubuser/haskell-library-template/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/haskell-library-template
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_haskell_library_template
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wincomplete-patterns
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , containers
+    , lens
+    , mtl
+    , text
+    , vector
+  default-language: Haskell2010
+
+test-suite haskell-library-template-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_haskell_library_template
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , containers
+    , haskell-library-template
+    , hspec
+    , lens
+    , mtl
+    , text
+    , vector
+  default-language: Haskell2010

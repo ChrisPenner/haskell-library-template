@@ -1,0 +1,42 @@
+name:                haskell-library-template
+version:             0.1.0.0
+github:              "githubuser/haskell-library-template"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2020 Author name here"
+
+extra-source-files:
+- README.md
+- CHANGELOG.md
+
+description:         Please see the README on GitHub at <https://github.com/githubuser/haskell-library-template#readme>
+
+ghc-options:
+- -Wall
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+- mtl
+- text
+- bytestring
+- lens
+- vector
+
+library:
+  source-dirs: src
+  ghc-options:
+  - -Wincomplete-patterns
+
+tests:
+  haskell-library-template-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-library-template
+    - hspec
